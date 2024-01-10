@@ -14,10 +14,14 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/clean-blog.css') }}"
+    />
     <title>Hello Flask</title>
   </head>
   <body>
-    <nav>
+    <nav class="navbar">
       <ul>
         <li><a href="{{ url_for('index') }}">Home</a></li>
         <li><a href="{{ url_for('about') }}">About</a></li>
@@ -25,10 +29,7 @@
         <li><a href="{{ url_for('careers') }}">Careers</a></li>
       </ul>
     </nav>
-    {% block content %}
-
-    {% endblock %}
-
+    {% block content %} {% endblock %}
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
