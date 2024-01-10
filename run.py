@@ -2,6 +2,11 @@ import os
 import json
 from flask import Flask, render_template
 
+
+def modulo(num, val):
+    return num % val
+
+
 app = Flask(__name__)
 
 
